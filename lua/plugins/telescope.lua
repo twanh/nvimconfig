@@ -3,14 +3,14 @@
 
 require('telescope').setup{
   defaults = {
-    prompt_position = "bottom",
-    prompt_prefix = "|> ",
-    selection_caret = "> ",
-    entry_prefix = "  ",
-    initial_mode = "insert",
+    prompt_position    = "bottom",
+    prompt_prefix      = "|> ",
+    selection_caret    = "> ",
+    entry_prefix       = "  ",
+    initial_mode       = "insert",
     selection_strategy = "reset",
-    sorting_strategy = "descending",
-    layout_strategy = "horizontal", -- Verical is also nice
+    sorting_strategy   = "descending",
+    layout_strategy    = "horizontal", -- Verical is also nice
   }
 }
 

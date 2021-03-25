@@ -7,8 +7,17 @@
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
-  -- File explorer
+
+  -- LSP 
+  use 'neovim/nvim-lspconfig'
+  -- Nice icons in the completion menu
+  use 'onsails/lspkind-nvim'
+  -- Easy way to install a lsp
+  use 'anott03/nvim-lspinstall'
+  -- Completion
+  use 'hrsh7th/nvim-compe' 
+
+  -- File explorer 
   use 'kyazdani42/nvim-web-devicons' -- For file icons
   use 'kyazdani42/nvim-tree.lua'
 
@@ -36,6 +45,16 @@ return require('packer').startup(function()
 
   -- Git status (shows line change, etc...)
   use 'mhinz/vim-signify'
+
+  -- Airline
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+
+  -- Markdown syntax highlighting, matching, rules and mappings...
+  use {
+    'plasticboy/vim-markdown',
+    requires = {{'godlygeek/tabular'}}
+  }
 
 end)
 

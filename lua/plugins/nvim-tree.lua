@@ -18,6 +18,6 @@ vim.g.nvim_tree_show_icons = {
 
 -- NvimTree keybinds
 vim.api.nvim_set_keymap('n', '<leader>b', ':NvimTreeToggle <CR>', {silent = true, noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>p', ':NvimTreeFindFile <CR>', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>c', ':NvimTreeFindFile <CR>', {silent = true, noremap = true})
 
 

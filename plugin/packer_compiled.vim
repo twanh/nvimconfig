@@ -32,9 +32,25 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/auto-pairs"
+  },
   ["ayu-vim"] = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/ayu-vim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -43,10 +59,6 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -60,6 +72,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  tabular = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/tabular"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/telescope.nvim"
@@ -67,6 +83,30 @@ _G.packer_plugins = {
   vim = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-markdown"
+  },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+  },
+  ["vim-signify"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-signify"
   }
 }
 
