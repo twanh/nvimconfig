@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/twanh/testing'
+let g:netrw_dirhist_3='/home/twanh/journal'
+let g:netrw_dirhist_2='/home/twanh/code/codewars/TheSupermarketQueue'
+let g:netrw_dirhist_1='/home/twanh/code/algorithmswithgo/sorting'
+let g:netrw_dirhist_0='/home/twanh/code/algorithmswithgo'
+let g:netrw_dirhist_9='/home/twanh/code/algorithmswithgo/sorting'
+let g:netrw_dirhist_8='/home/twanh/code/algorithmswithgo'
+let g:netrw_dirhist_7='/home/twanh/code/algorithmswithgo/search'
+let g:netrw_dirhist_6='/home/twanh/code/algorithmswithgo'
+let g:netrw_dirhist_5='/home/twanh/code/work-o-clock/api'
