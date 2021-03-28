@@ -3,11 +3,11 @@ require('plugins')
 require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/commentary')
-require('plugins/airline')
 require('plugins/signify')
 require('plugins/vim-markdown')
 require('plugins/compe')
 require('plugins/lspkind')
+require('plugins/bufferline')
 -- Load settings
 require('settings')
 -- Load (global) keymaps

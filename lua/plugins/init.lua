@@ -46,10 +46,10 @@ return require('packer').startup(function()
   -- Git status (shows line change, etc...)
   use 'mhinz/vim-signify'
 
-  -- Airline
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
-
+  -- Bufferline
+  -- Note: Using fork of the orinal plugin to remove some padding
+  use {'twanh/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  
   -- Markdown syntax highlighting, matching, rules and mappings...
   use {
     'plasticboy/vim-markdown',

@@ -44,6 +44,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
+  ["nvim-bufferline.lua"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
   ["nvim-compe"] = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-compe"
@@ -52,6 +56,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
@@ -59,6 +67,10 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -83,14 +95,6 @@ _G.packer_plugins = {
   vim = {
     loaded = true,
     path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/home/twanh/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
   ["vim-commentary"] = {
     loaded = true,
