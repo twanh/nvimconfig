@@ -15,6 +15,8 @@ require('settings')
 require('keymaps')
 -- Load the colorscheme
 require('colorscheme')
+-- Load statusline
+require('statusline')
 -- Load the language servers
 require('lsp')
 require('lsp/python')
