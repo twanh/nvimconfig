@@ -72,7 +72,7 @@ M.get_line_col_words = function(self)
   if filetype == 'markdown' then
     return ' %l/%L %{wordcount().words} words '
   end
-  return ' %l/%L'
+  return ' %l/%L'
 end
 
 -- The active buffer statusline
