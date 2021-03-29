@@ -17,7 +17,7 @@ vim.o.swapfile = false -- Do not use swapfiles
 vim.o.hidden   = true -- Keep multiple buffers open
 
 -- Visual stuff 
-vim.o.relativenumber = true -- Use relative line numbers
+vim.cmd('set number relativenumber') -- Use relative line numbers (TODO: Use vim.o?)
 vim.o.wrap           = false -- DO NOT USE WRAP
 vim.o.background     = 'dark'
 vim.wo.signcolumn    = 'yes' -- Always show the sign columnm, otherwise it creates random movement
