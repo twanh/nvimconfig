@@ -8,6 +8,9 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- LOCAL PLUGINS
+  use '~/workspace/nvim-pydoc' 
+
   -- LSP 
   use 'neovim/nvim-lspconfig'
   -- Nice icons in the completion menu
@@ -57,5 +60,9 @@ return require('packer').startup(function()
     'plasticboy/vim-markdown',
     requires = {{'godlygeek/tabular'}}
   }
+
+  -- Pydoc plugin 
+  -- use 'twanh/nvim-pydoc'
+
 end)
 
