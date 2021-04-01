@@ -8,6 +8,7 @@ require('plugins/vim-markdown')
 require('plugins/compe')
 require('plugins/lspkind')
 require('plugins/bufferline')
+require('plugins/pydoc')
 -- Load settings
 require('settings')
 -- Load (global) keymaps

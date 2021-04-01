@@ -27,12 +27,14 @@ return require('packer').startup(function()
 
   -- Tree sitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+ 
+  -- Plenary for nice lua, also required for telescope
+  use 'nvim-lua/plenary.nvim'
+
 
   -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
-  }
+  use 'nvim-telescope/telescope.nvim'
+  
 
   -- Syntax highlighting for a lot of languages
   use 'sheerun/vim-polyglot'
@@ -55,6 +57,5 @@ return require('packer').startup(function()
     'plasticboy/vim-markdown',
     requires = {{'godlygeek/tabular'}}
   }
-
 end)
 
