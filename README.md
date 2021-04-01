@@ -16,9 +16,9 @@
 │   ├── plugins
 │   │   ├── [plugin].lua
 │   │   └──── [plugin] 
-│   │     		├── fns.lua
-│   │     		├── init.lua
-│   │     		└── mappings.lua
+│   │         ├── fns.lua
+│   │         ├── init.lua
+│   │         └── mappings.lua
 │   ├── settings.lua
 │   └── statusline.lua
 └── README.md
