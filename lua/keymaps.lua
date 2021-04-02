@@ -19,3 +19,7 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':bn<CR>', {noremap = true})
 vim.api.nvim_set_keymap('v', '<', '<gv', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 
+-- Center the next search result
+vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true })
+vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true })
+
