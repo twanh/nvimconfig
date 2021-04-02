@@ -33,3 +33,19 @@ vim.o.spelllang = 'en,nl' -- Make sure that nl lang is installed in spell dir
 -- Auto enable spell checking in markdown file and git commit messages
 vim.cmd('autocmd FileType markdown setlocal spell')
 vim.cmd('autocmd FileType gitcommit setlocal spell')
+
+
+-- AUTO COMMANDS
+-- Creating autocommand with vim.cmd does not always work correctly
+-- nvim_utitls has a good helper function for this.
+
+-- Alll autocmd should be stored in this table
+local autocmds = {
+  -- Highlight when yanking
+  highlight_yank = {
+    { [[TextYankPost * silent! lua vim.highlight.on_yank{higroup="Search", timeout=85} ]]},
+  }
+}
+-- Create the autogroups with help from nvim_utitls
+nvim_create_augroups(autocmds)
+

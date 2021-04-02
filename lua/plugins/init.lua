@@ -8,6 +8,9 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Extra utils for using lua in nvim
+  use 'norcalli/nvim_utils'
+
   -- LOCAL PLUGINS
   use '~/workspace/nvim-pydoc' 
 
