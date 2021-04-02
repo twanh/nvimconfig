@@ -30,3 +30,7 @@ vim.o.spelllang = 'en,nl' -- Make sure that nl lang is installed in spell dir
 -- Comletion
 vim.o.completeopt = "menuone,noselect"
 
+-- Auto enable spelling in markdown file and git commit messages
+
+vim.cmd('autocmd FileType markdown setlocal spell')
+vim.cmd('autocmd FileType gitcommit setlocal spell')
