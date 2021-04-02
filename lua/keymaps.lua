@@ -23,3 +23,19 @@ vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true })
 vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true })
 
+-- Copy/paste using the system clipboard when using <leader>
+-- Note: "+ means use the 'clipboard' register
+-- Set it in both normal and visual mode
+vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>p', '"+p', { noremap = true })
+
+
+
+
+
+
+
+
+
