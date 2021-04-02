@@ -36,7 +36,12 @@ return require('packer').startup(function()
 
 
   -- Telescope
-  use 'nvim-telescope/telescope.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
+
+  -- use 'nvim-telescope/telescope.nvim'
   
 
   -- Syntax highlighting for a lot of languages
