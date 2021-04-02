@@ -9,6 +9,8 @@ vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_auto_close = 1
 -- Show indent marker
 vim.g.nvim_tree_indent_markers = 1
+-- Hide dotfiles files (dotfiles can always be show using `H` in the file explorer)
+vim.g.nvim_tree_hide_dotfiles = 1
 -- Don't show the git icons
 vim.g.nvim_tree_show_icons = {
   ['folders'] = 1,
