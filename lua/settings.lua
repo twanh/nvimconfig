@@ -6,7 +6,7 @@ vim.o.encoding     = 'utf-8'
 vim.o.fileencoding = 'utf-8'
 vim.o.guifont      = 'Fira\\ Code' -- Use fira code font
 
--- Tabs vs Spaces
+-- Tabs vs Spaces xD
 vim.o.shiftwidth  = 2 -- Use 2 spaces for auto indent by default
 vim.o.expandtab   = true -- Convert tab to spaces
 vim.o.smartindent = true -- Better indentation
@@ -25,12 +25,11 @@ vim.o.background     = 'dark'
 vim.wo.signcolumn    = 'yes' -- Always show the sign columnm, otherwise it creates random movement
 vim.o.showtabline    = 2 -- Show tabs
 vim.o.termguicolors  = true
--- Spelling
-vim.o.spelllang = 'en,nl' -- Make sure that nl lang is installed in spell dir
 -- Comletion
 vim.o.completeopt = "menuone,noselect"
 
--- Auto enable spelling in markdown file and git commit messages
-
+-- Spelling
+vim.o.spelllang = 'en,nl' -- Make sure that nl lang is installed in spell dir
+-- Auto enable spell checking in markdown file and git commit messages
 vim.cmd('autocmd FileType markdown setlocal spell')
 vim.cmd('autocmd FileType gitcommit setlocal spell')
