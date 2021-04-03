@@ -1,5 +1,6 @@
 -- Load plugins
 require('plugins')
+require('plugins/nvim-utils') -- Initialize nvim_utils, so should load first
 require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/commentary')
@@ -8,7 +9,6 @@ require('plugins/vim-markdown')
 require('plugins/compe')
 require('plugins/lspkind')
 require('plugins/bufferline')
-require('plugins/nvim-utils')
 -- Load settings
 require('settings')
 -- Load (global) keymaps
