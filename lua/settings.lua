@@ -25,6 +25,7 @@ set_option('o', 'guifont', 'Fira\\ Code') -- Use fira code nerd font
 -- Tabs 
 set_option('b', 'shiftwidth', 2)      -- Use 2 spaces for auto indent by default
 set_option('b', 'expandtab', true)    -- Convert tab to spaces
+set_option('b', 'autoindent', true)   -- Better indentation
 set_option('b', 'smartindent', true)  -- Better indentation
 
 -- Saving and file management
@@ -67,7 +68,12 @@ local autocmds = {
   -- Highlight when yanking
   highlight_yank = {
     { [[TextYankPost * silent! lua vim.highlight.on_yank{higroup="Search", timeout=85} ]]},
-  }
+  },
+  -- Highlight 'LETOP:' (only) in markdown files 
+  highlight_letop = {
+    { [[BufEnter *.md silent! match Todo /LETOP:/ ]]},
+  },
 }
+
 -- Create the autogroups with help from nvim_utitls
 nvim_create_augroups(autocmds)
