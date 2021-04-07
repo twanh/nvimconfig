@@ -11,9 +11,9 @@ vim.api.nvim_set_keymap('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true
 vim.api.nvim_set_keymap('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true})
 
 -- Buffer navigation
-vim.api.nvim_set_keymap('n', '<leader>q', ':bp<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>w', ':bd<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>e', ':bn<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>q', ':bp<CR>', { noremap = true, silent=true })
+vim.api.nvim_set_keymap('n', '<leader>w', ':bd<CR>', { noremap = true, silent=true })
+vim.api.nvim_set_keymap('n', '<leader>e', ':bn<CR>', { noremap = true, silent=true })
 
 -- Keep the visual mode selection after indent
 vim.api.nvim_set_keymap('v', '<', '<gv', {noremap = true, silent = true})

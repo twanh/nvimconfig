@@ -51,6 +51,14 @@ M.simple_git = function()
     results_title=" Git Files "
    }))
 end
+-- Default file search with the center_no_prev layout
+M.simple_find = function() 
+  return require('telescope.builtin').find_files(merge(center_no_prev, {
+    results_title=" Find Files "
+   }))
+end
+
+
 -- Custom folder seaches
 
 -- Search through my notes folder
