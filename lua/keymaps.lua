@@ -32,4 +32,4 @@ vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>p', '"+p', { noremap = true })
 
 -- Reload all buffer
-vim.api.nvim_set_keymap('n', '<leader>r', ':bufdo e!<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>r', ':bufdo e!<CR>', { noremap = true })
