@@ -16,6 +16,8 @@ require('settings')
 require('keymaps')
 -- Load the colorscheme
 require('colorscheme')
+-- Load custom commands
+require('commands')
 -- Load statusline
 require('statusline')
 -- Load the language servers
