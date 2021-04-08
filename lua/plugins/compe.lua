@@ -50,8 +50,25 @@ vim.cmd('inoremap <silent><expr> <C-n> compe#complete()')
 vim.cmd('inoremap <silent><expr> <CR> compe#confirm("<CR>")')
 vim.cmd('inoremap <silent><expr> <C-e> compe#close("C-e>")')
 
--- Disable in markdown files
+-- Toggle compe
+vim.g.compe_active = true
+local function toggle_compe()
+  -- TODO: Make sure that it does not change the way the autocmd works
+  if (vim.g.compe_active) then
+    print("Turning off completion")
+    vim.g.compe_active = false 
+    disable_compe()
+  else 
+    print("Turning on completion")
+    vim.g.compe_active = true 
+    enable_compe()
+  end
+end
 
+-- Map <leader>c to toggle completion
+vim.api.nvim_set_keymap('n', '<leader>c', '<cmd>lua require("plugins.compe").toggle_compe()<cr>', { noremap = true })
+
+-- Disable in markdown files
 local autocmds = {
   -- Highlight when yanking
   disable_in_markdown = {
@@ -66,5 +83,6 @@ nvim_create_augroups(autocmds)
 
 return {
   enable_compe  = enable_compe,
-  disable_compe = disable_compe
+  disable_compe = disable_compe,
+  toggle_compe  = toggle_compe
 }
