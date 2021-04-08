@@ -48,6 +48,7 @@ set_option('o', 'completeopt',  'menuone,noselect')
 
 -- Spelling
 set_option('b', 'spelllang', 'en,nl') -- Make sure that nl lang is installed in spell dir
+set_option('b', 'spellfile', '/home/twanh/.config/nvim/spell/custom.utf-8.add') -- Use a spellfile to save words to
 -- Auto enable spell checking in markdown file and git commit messages
 vim.cmd('autocmd FileType markdown setlocal spell')
 vim.cmd('autocmd FileType gitcommit setlocal spell')
