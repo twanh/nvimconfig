@@ -57,7 +57,7 @@ end
 M.get_current_filename = function(self)
   local file_name, file_ext = vim.fn.expand("%:t"), vim.fn.expand("%:e")
   local icon = require'nvim-web-devicons'.get_icon(file_name, file_ext, { default = true })
-  return string.format("%s %s", icon, file_name)
+  return string.format("%s %s", icon, "%t")
 end
 
 -- Shows [+] is edited
