@@ -19,7 +19,22 @@ vim.g.nvim_tree_show_icons = {
 }
 
 -- NvimTree keybinds
--- vim.api.nvim_set_keymap('n', '<leader>b', ':NvimTreeToggle <CR>', {silent = true, noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>b', ':NvimTreeFindFile <CR>', {silent = true, noremap = true})
+vim.g.nvim_tree_find_file_open = true
+local function toggle_nvim_tree_find_file()
+  print("TOGGLE")
+  if (vim.g.nvim_tree_find_file_open) then
+    vim.g.nvim_tree_find_file_open = false 
+    vim.cmd('NvimTreeClose') 
+  else
+    vim.g.nvim_tree_find_file_open = true
+    vim.cmd('NvimTreeFindFile')
+  end
+end
 
+-- Use the toggle function to toggle the find file functionallity 
+vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("plugins.nvim-tree").toggle_nvim_tree_find_file()<cr>', { noremap = true, silent = true })
+
+return {
+  toggle_nvim_tree_find_file = toggle_nvim_tree_find_file
+}
 
