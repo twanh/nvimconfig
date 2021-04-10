@@ -19,9 +19,14 @@ vim.g.nvim_tree_show_icons = {
 }
 
 -- NvimTree keybinds
-vim.g.nvim_tree_find_file_open = true
+
+if (vim.g.nvim_tree_auto_open == 1) then
+  vim.g.nvim_tree_find_file_open = true
+else
+  vim.g.nvim_tree_find_file_open = false 
+end
+
 local function toggle_nvim_tree_find_file()
-  print("TOGGLE")
   if (vim.g.nvim_tree_find_file_open) then
     vim.g.nvim_tree_find_file_open = false 
     vim.cmd('NvimTreeClose') 
