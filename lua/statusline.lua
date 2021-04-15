@@ -11,28 +11,28 @@ vim.o.showmode = false
 local M = {}
 
 -- All possible vim modes
-local modes = setmetatable({
-      ['n'] = 'N',
+local modes  = setmetatable({
+      ['n']  = 'N',
       ['no'] = 'N-p',
-      ['v'] = 'V',
-      ['V'] = 'VL',
+      ['v']  = 'V',
+      ['V']  = 'VL',
       ['^V'] = 'VB',
-      ['s'] = 'S',
-      ['S'] = 'SL',
+      ['s']  = 'S',
+      ['S']  = 'SL',
       ['^S'] = 'SB',
-      ['i'] = 'I',
+      ['i']  = 'I',
       ['ic'] = 'I',
       ['ix'] = 'I',
-      ['R'] = 'R',
+      ['R']  = 'R',
       ['Rv'] = 'VR',
-      ['c'] = 'C',
+      ['c']  = 'C',
       ['cv'] = 'VE',
       ['ce'] = 'E',
-      ['r'] = 'P',
+      ['r']  = 'P',
       ['rm'] = 'M',
       ['r?'] = 'C',
-      ['!'] = 'S',
-      ['t'] = 'T'
+      ['!']  = 'S',
+      ['t']  = 'T'
     }, {
       -- weird mode issue
       __index = function(_, _)
@@ -75,6 +75,13 @@ M.get_line_col_words = function(self)
   return ' %l/%L'
 end
 
+-- Get the current git branch
+M.get_git_branch = function(self)
+  local git_command = 'git branch --show-current'
+  local result = vim.fn.systemlist(git_command)[1]
+  return "  " .. result .. " "
+end
+
 -- The active buffer statusline
 M.set_active = function(self)
  
@@ -83,10 +90,12 @@ M.set_active = function(self)
   local modified = self.get_modified()
   local line_col_word = self.get_line_col_words()
   local bufnr = self.get_current_buf_nr()
+  local git_branch = self.get_git_branch()
+
   return table.concat({
     bufnr, mode, filename, modified,
     "%=", 
-    line_col_word
+    git_branch, line_col_word
   })
 
 end
