@@ -2,7 +2,7 @@
 -- Ref: https://github.com/kyazdani42/nvim-tree.lua
 
 -- Ignore common directories that have no value for most projects
-vim.g.nvim_tree_ignore = {'.git'}
+vim.g.nvim_tree_ignore = {'.git', '__pycache__'}
 -- Opens nvim tree when opening in a directory
 vim.g.nvim_tree_auto_open = 1
 -- Close when it's the last buffer
