@@ -1,11 +1,6 @@
 -- Custom simple statusline
 -- Inspired on: https://elianiva.my.id/post/neovim-lua-statusline
---
--- TODO:
--- Make sure each buffer shows its own information
--- Currently the stausline of inactive buffers shows the information of the active buffer
 
--- Disable showing the mode 
 vim.o.showmode = false
 
 local M = {}
