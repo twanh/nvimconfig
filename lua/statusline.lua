@@ -74,7 +74,11 @@ end
 M.get_git_branch = function(self)
   local git_command = 'git branch --show-current'
   local result = vim.fn.systemlist(git_command)[1]
-  return "  " .. result .. " "
+  if string.sub(result, 1, string.len("fatal:")) == "fatal:" then
+    return ""
+  else
+    return "  " .. result .. " "
+  end
 end
 
 -- The active buffer statusline
