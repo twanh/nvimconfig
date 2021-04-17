@@ -33,3 +33,7 @@ vim.api.nvim_set_keymap('v', '<leader>p', '"+p', { noremap = true })
 
 -- Reload all buffer
 vim.api.nvim_set_keymap('n', '<leader>r', ':bufdo e!<CR>', { noremap = true })
+
+-- Terminal remaps
+-- Quit the terminal
+vim.api.nvim_set_keymap('t', '<leader><esc>', '<c-\\><c-n>', { noremap = true })
