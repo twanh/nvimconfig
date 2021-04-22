@@ -11,8 +11,10 @@ return require('packer').startup(function()
   -- Extra utils for using lua in nvim
   use 'norcalli/nvim_utils'
 
-  -- LOCAL PLUGINS
+  -- My Plugins
   use '~/workspace/nvim-pydoc' 
+  -- Pydoc plugin 
+  -- use 'twanh/nvim-pydoc'
 
   -- LSP 
   use 'neovim/nvim-lspconfig'
@@ -44,9 +46,6 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
 
-  -- use 'nvim-telescope/telescope.nvim'
-  
-
   -- Syntax highlighting for a lot of languages
   use 'sheerun/vim-polyglot'
 
@@ -69,8 +68,7 @@ return require('packer').startup(function()
     requires = {{'godlygeek/tabular'}}
   }
 
-  -- Pydoc plugin 
-  -- use 'twanh/nvim-pydoc'
+  use 'metakirby5/codi.vim'
 
 end)
 
