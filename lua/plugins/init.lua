@@ -56,8 +56,15 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
 
   -- Git status (shows line change, etc...)
-  use 'mhinz/vim-signify'
+  -- use 'mhinz/vim-signify'
 
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+  
   -- Bufferline
   -- Note: Using fork of the orinal plugin to remove some padding
   use {'twanh/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
