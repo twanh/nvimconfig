@@ -9,6 +9,7 @@ require('plugins/vim-markdown')
 require('plugins/compe')
 require('plugins/lspkind')
 require('plugins/bufferline')
+require('plugins/gitsigns')
 -- Load settings
 require('settings')
 -- Load (global) keymaps
@@ -25,3 +26,4 @@ require('lsp')
 require('lsp/python')
 require('lsp/vue')
 require('lsp/typescript')
+require('lsp/ccls')

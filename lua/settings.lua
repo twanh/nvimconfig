@@ -43,6 +43,7 @@ set_option('w', 'signcolumn', 'yes')    -- Always show the sign columnm, otherwi
 set_option('o', 'showtabline', 2)       -- Show tabs
 set_option('w', 'cursorline', true)
 set_option('o', 'termguicolors', true)
+set_option('w', 'colorcolumn', '79')
  -- Completion
 set_option('o', 'completeopt',  'menuone,noselect')
 
