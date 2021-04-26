@@ -75,6 +75,9 @@ local autocmds = {
   highlight_letop = {
     { [[BufEnter *.md silent! match Todo /LETOP:/ ]]},
   },
+  highlight_note = {
+    { [[BufEnter *.md silent! match Todo /Note:/ ]]},
+  },
 }
 
 -- Create the autogroups with help from nvim_utitls
