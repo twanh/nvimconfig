@@ -10,6 +10,7 @@ require('plugins/compe')
 require('plugins/lspkind')
 require('plugins/bufferline')
 require('plugins/gitsigns')
+require('plugins/pydoc')
 -- Load settings
 require('settings')
 -- Load (global) keymaps
@@ -27,3 +28,5 @@ require('lsp/python')
 require('lsp/vue')
 require('lsp/typescript')
 require('lsp/ccls')
+require('lsp/rust')
+require('lsp/go')

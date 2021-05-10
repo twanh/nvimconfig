@@ -39,7 +39,6 @@ return require('packer').startup(function()
   -- Plenary for nice lua, also required for telescope
   use 'nvim-lua/plenary.nvim'
 
-
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -51,6 +50,9 @@ return require('packer').startup(function()
 
   -- Auto close brackets etc
   use 'jiangmiao/auto-pairs'
+
+  -- Tabular
+  use 'godlygeek/tabular'
 
   -- Comment out code
   use 'tpope/vim-commentary'
@@ -70,12 +72,17 @@ return require('packer').startup(function()
   use {'twanh/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
   
   -- Markdown syntax highlighting, matching, rules and mappings...
-  use {
-    'plasticboy/vim-markdown',
-    requires = {{'godlygeek/tabular'}}
-  }
+  -- use {
+  --   'plasticboy/vim-markdown',
+  --   requires = {{'godlygeek/tabular'}}
+  -- }
 
+  -- Cool repl like thing
   use 'metakirby5/codi.vim'
+
+
+  -- Extra go functioniallity
+  -- use 'fatih/vim-go'
 
 end)
 
