@@ -44,7 +44,6 @@ set_option('o', 'showtabline', 2)       -- Show tabs
 set_option('w', 'cursorline', true)
 set_option('o', 'termguicolors', true)
 set_option('w', 'colorcolumn', '79')
-set_option('o', 'guicursor', 'i:block') -- Use the block cursor in insert mode
  -- Completion
 set_option('o', 'completeopt',  'menuone,noselect')
 
