@@ -70,7 +70,7 @@ return require('packer').startup(function()
   -- Bufferline
   -- Note: Using fork of the orinal plugin to remove some padding
   use {'twanh/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
-  
+
   -- Markdown syntax highlighting, matching, rules and mappings...
   -- use {
   --   'plasticboy/vim-markdown',
