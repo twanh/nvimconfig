@@ -20,6 +20,8 @@ require('keymaps')
 require('colorscheme')
 -- Load custom commands
 require('commands')
+-- Load custom snippets
+require('snips')
 -- Load statusline
 require('statusline')
 -- Load the language servers
