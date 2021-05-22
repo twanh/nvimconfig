@@ -1,5 +1,5 @@
--- Custom snippets (not using any snippets plugin)
--- actually commands... 
+-- Custom snippets, actually commands... (not using any snippets plugin) 
+-- Ref: https://www.youtube.com/watch?v=Q4I_Ft-VLAg 
 -- Note: nvim_utils plugin is required
 
 -- This keymap is used to goto and replace <++> in the snippets
@@ -31,7 +31,15 @@ local md_snippets = {
   },
   image = {
     -- ;im adds [<++>](<++>)
-    "FileType markdown inoremap ;i ![<++>](<++>)"
+    "filetype markdown inoremap ;i ![<++>](<++>)"
+  },
+  bold = {
+    -- ;b adds **<++>**<++>
+    "filetype markdown inoremap ;b **<++>**<++>"
+  },
+  italic = {
+    -- ;b adds **<++>**<++>
+    "filetype markdown inoremap ;i _<++>_<++>"
   },
 }
 
