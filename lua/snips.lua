@@ -3,8 +3,8 @@
 -- Note: nvim_utils plugin is required
 
 -- This keymap is used to goto and replace <++> in the snippets
-vim.api.nvim_set_keymap('i', '<Space><Space>', '<Esc>/<++><Enter>"_c4l', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space><Space>', '<Esc>/<++><Enter>"_c4l', { noremap = true })
+vim.api.nvim_set_keymap('i', ';;', '<Esc>/<++><Enter>"_c4l', { noremap = true })
+vim.api.nvim_set_keymap('n', ';;', '<Esc>/<++><Enter>"_c4l', { noremap = true })
 
 -- Markdown snippets
 -- TODO:
@@ -19,7 +19,10 @@ local md_snippets = {
   },
   latexmath = {
     -- ;m adds $$ then puts the curser between $$
-    [[FileType markdown inoremap ;m $$<Esc>i]]
+    [[FileType markdown inoremap ;m $$ <++><Esc>5hi]]
+  },
+  latex_frac = {
+    [[FileType markdown inoremap ;fr \frac{}{<++>}<++><Esc>10hi]]
   },
   codeblock = {
     -- ;c adds code block
@@ -29,17 +32,13 @@ local md_snippets = {
     -- ;l adds [<++>](<++>)
     "FileType markdown inoremap ;l [<++>](<++>)"
   },
-  image = {
-    -- ;im adds [<++>](<++>)
-    "filetype markdown inoremap ;i ![<++>](<++>)"
-  },
   bold = {
-    -- ;b adds **<++>**<++>
-    "filetype markdown inoremap ;b **<++>**<++>"
+    -- ;b adds ****<++> and puts the cursor at the correct pos.
+    "filetype markdown inoremap ;b **** <++><Esc>6hi"
   },
   italic = {
-    -- ;b adds **<++>**<++>
-    "filetype markdown inoremap ;i _<++>_<++>"
+    -- ;i adds __<++> and puts the cursor at the correct position
+    "filetype markdown inoremap ;i __ <++><Esc>5hi"
   },
 }
 
