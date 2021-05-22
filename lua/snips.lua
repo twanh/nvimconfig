@@ -4,7 +4,6 @@
 
 -- This keymap is used to goto and replace <++> in the snippets
 vim.api.nvim_set_keymap('i', ';;', '<Esc>/<++><Enter>"_c4l', { noremap = true })
-vim.api.nvim_set_keymap('n', ';;', '<Esc>/<++><Enter>"_c4l', { noremap = true })
 
 -- Markdown snippets
 -- TODO:
