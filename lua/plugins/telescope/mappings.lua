@@ -1,9 +1,8 @@
 -- Keymaps
 vim.api.nvim_set_keymap('n', '<leader>ff', '<CMD>lua require("plugins.telescope.fns").simple_find()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fd', '<CMD>Telescope find_files <CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fg', '<CMD>lua require("plugins.telescope.fns").simple_git()<CR>', { noremap = true })
 -- Use custom buffer search 
-vim.api.nvim_set_keymap('n', '<leader>fb', '<CMD>lua require("plugins.telescope.fns").search_buffers()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>fd', '<CMD>lua require("plugins.telescope.fns").search_buffers()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fr', '<CMD>Telescope registers<CR>', { noremap = true })
 
 -- Custom pickers 
