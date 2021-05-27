@@ -4,7 +4,8 @@ vim.api.nvim_set_keymap('n', '<leader>fg', '<CMD>lua require("plugins.telescope.
 -- Use custom buffer search 
 vim.api.nvim_set_keymap('n', '<leader>fd', '<CMD>lua require("plugins.telescope.fns").search_buffers()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fr', '<CMD>Telescope registers<CR>', { noremap = true })
-
+-- Spelling correction 
+vim.api.nvim_set_keymap('n', '<leader>fs', '<CMD>Telescope spell_suggest<CR>', { noremap = true })
 -- Custom pickers 
 -- Search ~/Dropbox/notes with <leader>fn
 vim.api.nvim_set_keymap('n', '<leader>fn', '<CMD>lua require("plugins.telescope.fns").search_notes()<CR>', { noremap = true })
