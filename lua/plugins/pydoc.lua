@@ -1,2 +1,2 @@
 -- Set the pydoc command
-vim.g.nvim_pydoc_command = 'pydoc2'
+vim.g.nvim_pydoc_command = 'pydoc3'
