@@ -18,12 +18,14 @@ end
 -- Default center dropdown with no preview
 local center_no_prev = {
   layout_strategy = "center",
+  layout_config = {
+    prompt_position = "top",
+    width = 85,
+    height = 25,
+  },
   previewer       = false,
   results_title   = false,
   prompt_title    = false,
-  prompt_position = "top",
-  results_height  = 25,
-  width           = 85,
   -- Border chars need to be changed to make the promt connect to the results
   borderchars = {
     { '─', '│', '─', '│', '╭', '╮', '╯', '╰'},
@@ -41,23 +43,22 @@ local M = {}
 -- Search buffers
 M.search_buffers = function() 
   return require('telescope.builtin').buffers(merge(center_no_prev, {
-    results_title=" Current Buffers "
+    results_title=" Current Buffers ",
    }))
 end
 
 -- Git search with the center_no_prev layout
 M.simple_git = function() 
   return require('telescope.builtin').git_files(merge(center_no_prev, {
-    results_title=" Git Files "
+    results_title=" Git Files ",
    }))
 end
 -- Default file search with the center_no_prev layout
 M.simple_find = function() 
   return require('telescope.builtin').find_files(merge(center_no_prev, {
-    results_title=" Find Files "
+    results_title=" Find Files ",
    }))
 end
-
 
 -- Custom folder seaches
 

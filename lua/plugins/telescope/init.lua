@@ -13,7 +13,9 @@ require('telescope').setup{
     selection_strategy = "reset",
     sorting_strategy   = "descending",
     layout_strategy    = "horizontal", -- Verical is also nice
-    prompt_position    = 'top',
+    layout_config = {
+      prompt_position    = 'top',
+    },
     color_devicons     = true,
     mappings = {
       i = {
@@ -25,4 +27,3 @@ require('telescope').setup{
 }
 
 require('plugins.telescope.mappings')
-
