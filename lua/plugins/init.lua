@@ -87,7 +87,11 @@ return require('packer').startup(function()
   -- Cool repl like thing
   use 'metakirby5/codi.vim'
 
-
+  -- Arduino 
+  use 'stevearc/vim-arduino'
+  
+  -- Jinja Support
+  use 'lepture/vim-jinja'
   -- Extra go functioniallity
   -- use 'fatih/vim-go'
 
