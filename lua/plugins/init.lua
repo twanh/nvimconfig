@@ -95,5 +95,8 @@ return require('packer').startup(function()
   -- Extra go functioniallity
   -- use 'fatih/vim-go'
 
+  -- Ipython notebook stuffs
+  use 'untitled-ai/jupyter_ascending.vim'
+
 end)
 
