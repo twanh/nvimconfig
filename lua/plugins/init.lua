@@ -2,12 +2,12 @@
 -- Ref: https://github.com/wbthomason/packer.nvim
 
 -- Auto install packer when it is not installed
-local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
+-- local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  vim.api.nvim_command('packadd packer.nvim')
-end
+-- if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+--   vim.fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+--   vim.api.nvim_command('packadd packer.nvim')
+-- end
 
 -- The actuall packer startup
 -- Note: On first load `:PackerInstall` has to be run to install these plugins
