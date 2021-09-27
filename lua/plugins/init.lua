@@ -95,5 +95,8 @@ return require('packer').startup(function()
   -- Extra go functioniallity
   -- use 'fatih/vim-go'
 
+  -- Jupytext
+  use 'goerz/jupytext.vim'
+
 end)
 
