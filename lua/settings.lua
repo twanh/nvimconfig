@@ -61,6 +61,9 @@ set_option('o', 'ignorecase', true)
 set_option('o', 'splitright', true)  -- Split to the right
 set_option('o', 'splitbelow', false) -- Make sure to split above the curren window
 
+-- Mouse
+set_option('o', 'mouse', 'n')
+
 -- AUTO COMMANDS
 -- Creating autocommand with vim.cmd does not always work correctly
 -- nvim_utils has a good helper function for this.
