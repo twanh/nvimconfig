@@ -1,16 +1,17 @@
 -- Load plugins
 require('plugins')
 require('plugins/nvim-utils') -- Initialize nvim_utils, so should load first
-require('plugins/nvim-tree')
-require('plugins/telescope')
-require('plugins/commentary')
-require('plugins/signify')
-require('plugins/vim-markdown')
-require('plugins/compe')
-require('plugins/lspkind')
 require('plugins/bufferline')
+require('plugins/commentary')
+require('plugins/compe')
 require('plugins/gitsigns')
+require('plugins/jupytext')
+require('plugins/lspkind')
+require('plugins/nvim-tree')
 require('plugins/pydoc')
+require('plugins/signify')
+require('plugins/telescope')
+require('plugins/vim-markdown')
 -- Load settings
 require('settings')
 -- Load (global) keymaps
