@@ -1,12 +1,7 @@
 -- Manage the settings for nvim-tree
 -- Ref: https://github.com/kyazdani42/nvim-tree.lua
-
 -- Ignore common directories that have no value for most projects
 vim.g.nvim_tree_ignore = {'.git', '__pycache__'}
--- Opens nvim tree when opening in a directory
-vim.g.nvim_tree_auto_open = 1
--- Close when it's the last buffer
-vim.g.nvim_tree_auto_close = 1
 -- Show indent marker
 vim.g.nvim_tree_indent_markers = 1
 -- Hide dotfiles files (dotfiles can always be show using `H` in the file explorer)
@@ -39,7 +34,10 @@ end
 -- Use the toggle function to toggle the find file functionallity 
 vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("plugins.nvim-tree").toggle_nvim_tree_find_file()<cr>', { noremap = true, silent = true })
 
+require'nvim-tree'.setup {
+  auto_open = true,
+}
+
 return {
   toggle_nvim_tree_find_file = toggle_nvim_tree_find_file
 }
-

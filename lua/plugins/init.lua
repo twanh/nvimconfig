@@ -75,8 +75,7 @@ return require('packer').startup(function()
   }
   
   -- Bufferline
-  -- Note: Using fork of the orinal plugin to remove some padding
-  use {'twanh/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
   -- Markdown syntax highlighting, matching, rules and mappings...
   -- use {
@@ -94,10 +93,9 @@ return require('packer').startup(function()
   use 'lepture/vim-jinja'
   -- Extra go functioniallity
   -- use 'fatih/vim-go'
-
-  -- Ipython notebook stuffs
-  use 'GCBallesteros/jupytext.vim'
-  -- use 'untitled-ai/jupyter_ascending.vim'
+ 
+  -- Jupytext
+  use 'goerz/jupytext.vim'
 
 end)
 
