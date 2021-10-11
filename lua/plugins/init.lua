@@ -96,7 +96,8 @@ return require('packer').startup(function()
   -- use 'fatih/vim-go'
 
   -- Ipython notebook stuffs
-  use 'untitled-ai/jupyter_ascending.vim'
+  use 'GCBallesteros/jupytext.vim'
+  -- use 'untitled-ai/jupyter_ascending.vim'
 
 end)
 
