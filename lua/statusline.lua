@@ -37,14 +37,14 @@ local modes  = setmetatable({
 )
 
 
--- Gets the current mode 
+-- Gets the current mode
 -- and converts it the the character combination to show
 M.get_current_mode = function()
   return modes[vim.api.nvim_get_mode()['mode']] .. " "
 end
 
 -- Gets the current buffer number
-M.get_current_buf_nr = function() 
+M.get_current_buf_nr = function()
   return '﬘ %n '
 end
 
@@ -58,7 +58,7 @@ end
 -- Shows [+] is edited
 M.get_modified = function()
   return '%m'
-end 
+end
 
 -- Shows line:col and words if in markdown file
 M.get_line_col_words = function(self)
@@ -83,7 +83,7 @@ end
 
 -- The active buffer statusline
 M.set_active = function(self)
- 
+
   local mode = self:get_current_mode()
   local filename = self.get_current_filename()
   local modified = self.get_modified()
@@ -93,14 +93,14 @@ M.set_active = function(self)
 
   return table.concat({
     bufnr, mode, filename, modified,
-    "%=", 
+    "%=",
     git_branch, line_col_word
   })
 
 end
 
 -- Inactive buffers statusline
-M.set_inactive = function(self) 
+M.set_inactive = function(self)
   -- Just show the filename and modified
   local filename = self.get_current_filename()
   local modified = self.get_modified()
@@ -124,4 +124,3 @@ vim.api.nvim_exec([[
   au WinLeave,BufLeave * setlocal statusline=%!v:lua.Statusline('inactive')
   augroup END
 ]], false)
-

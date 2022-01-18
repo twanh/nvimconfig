@@ -1,7 +1,7 @@
 -- Custom functions (pickers) for telescope
 
 -- Used to merge the defaults with the new settings
--- Note: If a and b contain the same key, 
+-- Note: If a and b contain the same key,
 -- the value from a is overwritten with the one from b.
 -- Therefore defaults can be overwritten by passing the new value as b.
 local function merge(a, b)
@@ -41,20 +41,20 @@ local M = {}
 -- General searches
 
 -- Search buffers
-M.search_buffers = function() 
+M.search_buffers = function()
   return require('telescope.builtin').buffers(merge(center_no_prev, {
     results_title=" Current Buffers ",
    }))
 end
 
 -- Git search with the center_no_prev layout
-M.simple_git = function() 
+M.simple_git = function()
   return require('telescope.builtin').git_files(merge(center_no_prev, {
     results_title=" Git Files ",
    }))
 end
 -- Default file search with the center_no_prev layout
-M.simple_find = function() 
+M.simple_find = function()
   return require('telescope.builtin').find_files(merge(center_no_prev, {
     results_title=" Find Files ",
    }))

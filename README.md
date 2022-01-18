@@ -15,7 +15,7 @@
 │   │   ├── [lang].lua
 │   ├── plugins
 │   │   ├── [plugin].lua
-│   │   └──── [plugin] 
+│   │   └──── [plugin]
 │   │         ├── fns.lua
 │   │         ├── init.lua
 │   │         └── mappings.lua
@@ -36,5 +36,3 @@
 		- `init.lua` contains the packer config
 		- Every plugin has it's own file `[plugin].lua` with plugin specific settings and keymaps
 		- If a plugin requires a lot of settings (like telescope) a folder can also be used
-
-

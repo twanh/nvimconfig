@@ -19,20 +19,20 @@ return require('packer').startup(function()
   use 'norcalli/nvim_utils'
 
   -- My Plugins
-  use '~/workspace/nvim-pydoc' 
-  -- Pydoc plugin 
+  use '~/workspace/nvim-pydoc'
+  -- Pydoc plugin
   -- use 'twanh/nvim-pydoc'
 
-  -- LSP 
+  -- LSP
   use 'neovim/nvim-lspconfig'
   -- Nice icons in the completion menu
   use 'onsails/lspkind-nvim'
   -- Easy way to install a lsp
   use 'anott03/nvim-lspinstall'
   -- Completion
-  use 'hrsh7th/nvim-compe' 
+  use 'hrsh7th/nvim-compe'
 
-  -- File explorer 
+  -- File explorer
   use 'kyazdani42/nvim-web-devicons' -- For file icons
   use 'kyazdani42/nvim-tree.lua'
 
@@ -42,7 +42,7 @@ return require('packer').startup(function()
 
   -- Tree sitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
- 
+
   -- Plenary for nice lua, also required for telescope
   use 'nvim-lua/plenary.nvim'
 
@@ -73,7 +73,7 @@ return require('packer').startup(function()
       'nvim-lua/plenary.nvim'
     }
   }
-  
+
   -- Bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
@@ -86,14 +86,14 @@ return require('packer').startup(function()
   -- Cool repl like thing
   use 'metakirby5/codi.vim'
 
-  -- Arduino 
+  -- Arduino
   use 'stevearc/vim-arduino'
-  
+
   -- Jinja Support
   use 'lepture/vim-jinja'
   -- Extra go functioniallity
   -- use 'fatih/vim-go'
- 
+
   -- Jupytext
   use 'goerz/jupytext.vim'
 
@@ -105,4 +105,3 @@ return require('packer').startup(function()
   }
 
 end)
-

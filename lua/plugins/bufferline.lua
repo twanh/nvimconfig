@@ -3,7 +3,7 @@
 
 require'bufferline'.setup{
   options = {
-    -- Show the buffer id 
+    -- Show the buffer id
     numbers = "buffer_id",
     -- number_style="",
     -- Don't show the close icons
@@ -17,4 +17,3 @@ require'bufferline'.setup{
     enforce_regular_tabs = true,
   }
  }
-

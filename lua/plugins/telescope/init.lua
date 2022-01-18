@@ -22,7 +22,7 @@ require('telescope').setup{
         -- Use esc to quit even in insert mode
         ['<esc>'] = actions.close
       },
-    },   
+    },
   }
 }
 

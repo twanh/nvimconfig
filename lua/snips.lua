@@ -1,5 +1,5 @@
--- Custom snippets, actually commands... (not using any snippets plugin) 
--- Ref: https://www.youtube.com/watch?v=Q4I_Ft-VLAg 
+-- Custom snippets, actually commands... (not using any snippets plugin)
+-- Ref: https://www.youtube.com/watch?v=Q4I_Ft-VLAg
 -- Note: nvim_utils plugin is required
 
 -- This keymap is used to goto and replace <++> in the snippets

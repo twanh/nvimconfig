@@ -7,7 +7,7 @@
 local first_run = true
 
 -- Enabled compe with the wanted settings
-local function enable_compe() 
+local function enable_compe()
   require'compe'.setup {
     enabled = true;
     autocomplete = true;
@@ -33,14 +33,14 @@ local function enable_compe()
 end
 
 -- Disables compe
-local function disable_compe() 
+local function disable_compe()
   require'compe'.setup {
     enabled = false;
   }
 end
 
 -- Make sure that compe is enabled by default
-if (first_run == true) then 
+if (first_run == true) then
   first_run = false
   enable_compe()
 end
@@ -56,11 +56,11 @@ local function toggle_compe()
   -- TODO: Make sure that it does not change the way the autocmd works
   if (vim.g.compe_active) then
     print("Turning off completion")
-    vim.g.compe_active = false 
+    vim.g.compe_active = false
     disable_compe()
-  else 
+  else
     print("Turning on completion")
-    vim.g.compe_active = true 
+    vim.g.compe_active = true
     enable_compe()
   end
 end

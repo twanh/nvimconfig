@@ -17,12 +17,12 @@ local function set_option(scope, key, value)
   if scope ~= 'o' then option_scopes['o'][key] = value end
 end
 
--- File encoding 
+-- File encoding
 set_option('o', 'encoding', 'utf-8')
 set_option('o', 'fileencoding', 'utf-8')
 set_option('o', 'guifont', 'Fira\\ Code') -- Use fira code nerd font
 
--- Tabs 
+-- Tabs
 set_option('b', 'shiftwidth', 2)      -- Use 2 spaces for auto indent by default
 set_option('b', 'expandtab', true)    -- Convert tab to spaces
 set_option('b', 'autoindent', true)   -- Better indentation
@@ -33,7 +33,7 @@ set_option('o', 'backup', false)   -- Do not use backup files
 set_option('o', 'swapfile', false) -- Do not use swapfiles
 set_option('o', 'hidden', true)    -- Keep multiple buffers open
 
--- Visual stuff 
+-- Visual stuff
 -- Use relativenumbers but show the current line number
 set_option('w', 'number', true)
 set_option('w', 'relativenumber', true)
@@ -74,7 +74,7 @@ local autocmds = {
   highlight_yank = {
     { [[TextYankPost * silent! lua vim.highlight.on_yank{higroup="Search", timeout=85} ]]},
   },
-  -- Highlight 'LETOP:' (only) in markdown files 
+  -- Highlight 'LETOP:' (only) in markdown files
   highlight_letop = {
     { [[BufEnter *.md silent! match Todo /LETOP:/ ]]},
   },
