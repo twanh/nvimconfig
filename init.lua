@@ -11,6 +11,7 @@ require('plugins/nvim-tree')
 require('plugins/pydoc')
 require('plugins/signify')
 require('plugins/telescope')
+require('plugins/trouble')
 require('plugins/vim-markdown')
 -- Load settings
 require('settings')

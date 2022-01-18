@@ -97,5 +97,12 @@ return require('packer').startup(function()
   -- Jupytext
   use 'goerz/jupytext.vim'
 
+  -- Diagnostics
+
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+
 end)
 
