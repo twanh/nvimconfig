@@ -37,3 +37,6 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':bufdo e!<CR>', { noremap = true })
 -- Terminal remaps
 -- Quit the terminal
 vim.api.nvim_set_keymap('t', '<leader><esc>', '<c-\\><c-n>', { noremap = true })
+
+-- Move to previous spelling mistake and auto fix it.
+vim.api.nvim_set_keymap('n', '<leader>s', '[s 1z=', { noremap = true })
