@@ -103,6 +103,12 @@ return require('packer').startup(function()
     requires = "kyazdani42/nvim-web-devicons",
   }
 
+  -- Show todos in trouble
+
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim"
+  }
   -- Auto close tags
   use 'alvan/vim-closetag'
 
