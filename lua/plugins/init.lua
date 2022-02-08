@@ -103,4 +103,8 @@ return require('packer').startup(function()
     requires = "kyazdani42/nvim-web-devicons",
   }
 
+  -- Auto close tags
+  use 'alvan/vim-closetag'
+
+
 end)
