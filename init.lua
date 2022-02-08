@@ -13,7 +13,6 @@ require('plugins/signify')
 require('plugins/telescope')
 require('plugins/trouble')
 require('plugins/vim-markdown')
-require('plugins/closetag')
 -- Load settings
 require('settings')
 -- Load (global) keymaps
