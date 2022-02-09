@@ -113,4 +113,8 @@ return require('packer').startup(function()
   use 'alvan/vim-closetag'
 
 
+  -- LATEX Support
+  use 'lervag/vimtex'
+
+
 end)
