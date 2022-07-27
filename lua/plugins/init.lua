@@ -113,4 +113,8 @@ return require('packer').startup(function()
   use 'alvan/vim-closetag'
 
 
+  -- Snippets
+  use 'SirVer/ultisnips'
+
+
 end)

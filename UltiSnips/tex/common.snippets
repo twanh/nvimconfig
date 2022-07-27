@@ -1,0 +1,30 @@
+snippet ff "The \frac{}{} command"
+\frac{$1}{$2}$0
+endsnippet
+
+# Note: `b` option ensures newline
+snippet env "New LaTeX environment" b
+\begin{$1}
+	$2
+\end{$1}
+$0
+endsnippet
+
+## TEXT 
+# Triggered in visual mode with V <TAB> code
+
+# ITALIC
+snippet tit "The \textit{} command for italic font"
+\textit{${1:${VISUAL:}}}$0
+endsnippet
+
+# BOLD
+snippet tbf "The \textbf{} command for bold font"
+\textbf{${1:${VISUAL:}}}$0
+endsnippet
+
+# Underline
+snippet tu "The \underline{} command for underlined text"
+\underline{${1:${VISUAL:}}}$0
+endsnippet
+
