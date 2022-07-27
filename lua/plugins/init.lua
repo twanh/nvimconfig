@@ -116,5 +116,8 @@ return require('packer').startup(function()
   -- Snippets
   use 'SirVer/ultisnips'
 
+  -- Latex
+  use 'lervag/vimtex'
+
 
 end)
