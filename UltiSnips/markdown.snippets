@@ -1,2 +1,54 @@
 # TODO: Move the ; snippets that are currently in place to here!
 
+snippet fm "Add (default) frontmatter" b
+---
+title: $1
+date: $2
+subject: $3
+tags: $4
+---
+
+$0
+endsnippet
+
+snippet li "Add link"
+[$1]($2)$0
+endsnippet
+
+snippet def "Add defintion" b
+$1
+: $2
+$0
+endsnippet
+
+# Text
+snippet b "Make text bold"
+**$1${VISUAL:}**$0
+endsnippet
+
+snippet i "Make text italic"
+_$1${VISUAL:}_$0
+endsnippet
+
+# Latex Math
+
+snippet $ "Add math block" 
+\$${1:${VISUAL:}}\$$0
+endsnippet
+
+snippet fr "Add fraction" 
+\frac{$1}{$2}$0
+endsnippet
+
+snippet ar "Add \rightarrow" 
+\rightarrow
+endsnippet
+
+snippet al "Add \leftarrow" 
+\leftarrow
+endsnippet
+
+snippet alr "Add \leftrightarrow" 
+\leftrightarrow
+endsnippet
+
