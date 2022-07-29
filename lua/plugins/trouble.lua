@@ -22,7 +22,7 @@ vim.api.nvim_set_keymap('n',
   { silent = true, noremap=true}
 )
 require("trouble").setup{
-  position = 'bottom',
+  position = 'right',
   mode = 'document_diagnostics',
   auto_preview = false,
   auto_close = true,

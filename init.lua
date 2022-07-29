@@ -12,7 +12,6 @@ require('plugins/pydoc')
 require('plugins/signify')
 require('plugins/telescope')
 require('plugins/trouble')
-require('plugins/todo-comments')
 require('plugins/vim-markdown')
 -- Load settings
 require('settings')
