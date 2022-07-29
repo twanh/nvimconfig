@@ -54,6 +54,10 @@ set_option('b', 'spellfile', '/home/twanh/.config/nvim/spell/custom.utf-8.add') 
 vim.cmd('autocmd FileType markdown setlocal spell')
 vim.cmd('autocmd FileType gitcommit setlocal spell')
 
+-- Filetype settings
+-- Make sure that .tex files set filetype=tex
+vim.cmd('autocmd BufNewFile,BufRead *.tex set filetype=tex')
+
 -- Searching
 set_option('o', 'ignorecase', true)
 
