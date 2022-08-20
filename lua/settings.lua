@@ -17,6 +17,9 @@ local function set_option(scope, key, value)
   if scope ~= 'o' then option_scopes['o'][key] = value end
 end
 
+-- Set the python path
+vim.g.python3_host_prog = '/usr/bin/python3'
+
 -- File encoding
 set_option('o', 'encoding', 'utf-8')
 set_option('o', 'fileencoding', 'utf-8')
