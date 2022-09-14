@@ -28,6 +28,9 @@ local function enable_compe()
       calc = true;
       nvim_lsp = true;
       nvim_lua = true;
+      omni = {
+        filetypes = {'tex'},
+      },
     };
   }
 end

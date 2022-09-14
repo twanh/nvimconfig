@@ -49,6 +49,8 @@ set_option('o', 'termguicolors', true)
 set_option('w', 'colorcolumn', '79')
  -- Completion
 set_option('o', 'completeopt',  'menuone,noselect')
+-- Concealment
+-- set_option('w', 'conceallevel', 1)
 
 -- Spelling
 set_option('b', 'spelllang', 'en,nl') -- Make sure that nl lang is installed in spell dir
