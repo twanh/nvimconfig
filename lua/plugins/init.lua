@@ -113,5 +113,8 @@ return require('packer').startup(function()
   -- Latex
   use 'lervag/vimtex'
 
+  -- Lua dev
+  use 'milisims/nvim-luaref'
+  use 'folke/lua-dev.nvim'
 
 end)
