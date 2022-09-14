@@ -1,9 +1,29 @@
+
+# Math
 snippet fr "The \frac{}{} command"
 \frac{$1}{$2}$0
 endsnippet
 
+# Inline math
+# Source: https://castel.dev/post/lecture-notes-1/
+snippet im "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+# Math block
+snippet dm "Math" wA
+\[
+$1
+.\] $0
+endsnippet
+
 # Note: `b` option ensures newline
-snippet env "New LaTeX environment" b
+snippet beg "New LaTeX environment" b
 \begin{$1}
 	$2
 \end{$1}
@@ -14,17 +34,17 @@ endsnippet
 # Triggered in visual mode with V <TAB> code
 
 # ITALIC
-snippet tit "The \textit{} command for italic font"
+snippet i "The \textit{} command for italic font"
 \textit{${1:${VISUAL:}}}$0
 endsnippet
 
 # BOLD
-snippet tbf "The \textbf{} command for bold font"
+snippet b "The \textbf{} command for bold font"
 \textbf{${1:${VISUAL:}}}$0
 endsnippet
 
 # Underline
-snippet tu "The \underline{} command for underlined text"
+snippet u "The \underline{} command for underlined text"
 \underline{${1:${VISUAL:}}}$0
 endsnippet
 
