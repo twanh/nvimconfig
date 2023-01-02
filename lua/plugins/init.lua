@@ -19,9 +19,9 @@ return require('packer').startup(function()
   use 'norcalli/nvim_utils'
 
   -- My Plugins
-  -- use '~/workspace/nvim-pydoc'
+  use '~/workspace/nvim-pydoc'
   -- Pydoc plugin
-  use 'twanh/nvim-pydoc'
+  -- use 'twanh/nvim-pydoc'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
