@@ -117,4 +117,7 @@ return require('packer').startup(function()
   use 'milisims/nvim-luaref'
   use 'folke/lua-dev.nvim'
 
+  -- Github copilot
+  use 'github/copilot.vim'
+
 end)

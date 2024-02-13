@@ -4,6 +4,7 @@ require('plugins/nvim-utils') -- Initialize nvim_utils, so should load first
 require('plugins/bufferline')
 require('plugins/commentary')
 require('plugins/compe')
+require('plugins/copilot')
 require('plugins/gitsigns')
 require('plugins/jupytext')
 -- require('plugins/lspkind')
