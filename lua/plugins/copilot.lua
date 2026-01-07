@@ -11,6 +11,12 @@
 --- )
 
 
+require("copilot").setup({
+	-- Disable inline suggestions, as they conflict with nvim-cmp
+  suggestion = { enabled = false },
+  panel = { enabled = false },
+})
+
 
 -- https://www.reddit.com/r/neovim/comments/w2exp5/is_there_a_way_to_map_a_key_to_toggle_the_github/
 local copilot_on = true

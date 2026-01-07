@@ -1,11 +1,24 @@
 -- Keymappings
-vim.cmd('nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>')
-vim.cmd('nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>')
-vim.cmd('nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>')
-vim.cmd('nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>')
-vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
-vim.cmd('nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>')
--- TODO: Find better keybinds, because these keep messing me up :(
--- vim.cmd('nnoremap <silent> <C-]> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
--- vim.cmd('nnoremap <silent> <C-[> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
-vim.cmd('nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>')
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    local opts = { buffer = args.buf, silent = true }
+    
+    -- Standard Go-to mappings
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    
+    -- Documentation and Help
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    
+    -- Actions
+    vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+
+    -- Fixed Diagnostic navigation (replaces your broken TODOs)
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+  end,
+})

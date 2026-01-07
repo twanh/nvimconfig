@@ -30,7 +30,20 @@ return require('packer').startup(function()
   -- Easy way to install a lsp
   use 'anott03/nvim-lspinstall'
   -- Completion
-  use 'hrsh7th/nvim-compe'
+  -- use 'hrsh7th/nvim-compe'
+
+
+  -- Updated completion
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-calc'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-omni'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+
 
   -- File explorer
   use 'kyazdani42/nvim-web-devicons' -- For file icons
@@ -118,6 +131,13 @@ return require('packer').startup(function()
   use 'folke/lua-dev.nvim'
 
   -- Github copilot
-  use 'github/copilot.vim'
+  -- use 'github/copilot.vim'
+  use 'zbirenbaum/copilot.lua'
+
+  -- Folding
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
+  -- Mason
+  use 'mason-org/mason.nvim'
 
 end)

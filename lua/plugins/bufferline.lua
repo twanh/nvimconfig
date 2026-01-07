@@ -6,6 +6,8 @@ require'bufferline'.setup{
     -- Show the buffer id
     numbers = "buffer_id",
     -- number_style="",
+    mode="buffers",
+    seperator_style="thin",
     -- Don't show the close icons
     show_buffer_close_icons = false,
     show_close_icon = false,

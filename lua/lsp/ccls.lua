@@ -1,7 +1,5 @@
-require'lspconfig'.ccls.setup {
-  -- init_options = {
-  --   cache = {
-  --     directory = ".ccls-cache";
-  --   };
-  -- }
-}
+vim.lsp.config('ccls', {
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+})
+
+vim.lsp.enable('ccls')

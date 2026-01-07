@@ -47,6 +47,8 @@ set_option('o', 'showtabline', 2)       -- Show tabs
 set_option('w', 'cursorline', true)
 set_option('o', 'termguicolors', true)
 set_option('w', 'colorcolumn', '79')
+set_option('o', 'foldenable',  false)
+set_option('o', 'foldmethod', 'indent')
  -- Completion
 set_option('o', 'completeopt',  'menuone,noselect')
 -- Concealment

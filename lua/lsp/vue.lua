@@ -1,2 +1,3 @@
 -- Vue language server
-require'lspconfig'.vuels.setup{}
+-- require'lspconfig'.vuels.setup{}
+
