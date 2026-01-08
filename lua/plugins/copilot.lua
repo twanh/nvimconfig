@@ -12,8 +12,19 @@
 
 
 require("copilot").setup({
-	-- Disable inline suggestions, as they conflict with nvim-cmp
-  suggestion = { enabled = false },
+  suggestion = {
+    enabled = true,
+    auto_trigger = true,
+    debounce = 75,
+    keymap = {
+      accept = "<Tab>",
+      accept_word = false,
+      accept_line = false,
+      next = "<M-]>",
+      prev = "<M-[>",
+      dismiss = "<C-]>",
+    },
+  },
   panel = { enabled = false },
 })
 

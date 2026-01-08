@@ -84,8 +84,36 @@
 local cmp = require'cmp'
 local luasnip = require "luasnip"
 
+-- Kind icons for better visual appearance
+local kind_icons = {
+  Text = "󰉿",
+  Method = "󰆧",
+  Function = "󰊕",
+  Constructor = "",
+  Field = "󰜢",
+  Variable = "󰀫",
+  Class = "󰠱",
+  Interface = "",
+  Module = "",
+  Property = "󰜢",
+  Unit = "󰑭",
+  Value = "󰎠",
+  Enum = "",
+  Keyword = "󰌋",
+  Snippet = "",
+  Color = "󰏘",
+  File = "󰈙",
+  Reference = "󰈇",
+  Folder = "󰉋",
+  EnumMember = "",
+  Constant = "󰏿",
+  Struct = "󰙅",
+  Event = "",
+  Operator = "󰆕",
+  TypeParameter = "",
+}
+
 cmp.setup({
-  -- Wrap these in the 'completion' table
   completion = {
     autocomplete = { cmp.TriggerEvent.TextChanged },
     completeopt = 'menu,menuone,noinsert',
@@ -95,19 +123,48 @@ cmp.setup({
       luasnip.lsp_expand(args.body)
     end,
   },
+  window = {
+    completion = cmp.config.window.bordered({
+      border = 'rounded',
+      winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None',
+    }),
+    documentation = cmp.config.window.bordered({
+      border = 'rounded',
+      winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None',
+    }),
+  },
   mapping = cmp.mapping.preset.insert({
     ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
     ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ 
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
-      select = false, 
+      select = true,
     }),
   }),
   formatting = {
-    fields = { "menu", "abbr", "kind" },
+    fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
-      vim_item.menu = string.sub(entry.source.name, 1, 3)
+      -- Add kind icon
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind] or "", vim_item.kind)
+
+      -- Limit abbr width to prevent overflow
+      local max_width = 50
+      if #vim_item.abbr > max_width then
+        vim_item.abbr = string.sub(vim_item.abbr, 1, max_width - 3) .. "..."
+      end
+
+      -- Set source name
+      local source_names = {
+        nvim_lsp = "[LSP]",
+        luasnip = "[Snip]",
+        buffer = "[Buf]",
+        path = "[Path]",
+      }
+      vim_item.menu = source_names[entry.source.name] or string.format("[%s]", entry.source.name)
+
       return vim_item
     end
   },
